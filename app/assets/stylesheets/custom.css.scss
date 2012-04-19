@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 50px;
 }
 
 section {
@@ -32,15 +32,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 1.8em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  color: #1796e6;
 }
 
 h2 {
   font-size: 1.7em;
-  letter-spacing: -1px;
+  letter-spacing: -1.3px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
@@ -58,14 +59,14 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #fff;
+  color: #FF8535;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
   &:hover {
-    color: #fff;
+    color: #FF8535;
     text-decoration: none;
   }
 }
