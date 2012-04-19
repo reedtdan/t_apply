@@ -1,7 +1,12 @@
-<% provide(:title, 'Home') %>
-<h1>Home</h1>
-<p>
+<div class="center hero-unit">
+<h1>Telluride Application</h1>
+<h2>
   This is the home page for the
   <a href="http://www.telluride-house.org">Telluride House</a>
   application.
-</p>
+</h2>
+
+  <%= link_to "Start the Application!", signup_path, class: "btn btn-large btn-primary" %>
+</div>
+
+<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
