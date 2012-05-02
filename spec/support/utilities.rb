@@ -5,4 +5,5 @@ def full_title(page_title)
   else
     "#{base_title} | #{page_title}"
   end
+  
 end
