@@ -18,6 +18,7 @@ describe "User pages" do
     it { should have_selector('h1',    text: 'Start') }
     it { should have_selector('title', text: 'Start') }
   end
+  
   describe "signup" do
 
       before { visit signup_path }
@@ -37,7 +38,20 @@ describe "User pages" do
           fill_in "Password",     with: "foobar"
           fill_in "Confirmation", with: "foobar"
         end
+<<<<<<< HEAD
       
+=======
+        
+        describe "after saving the user" do
+                before { click_button submit }
+                let(:user) { User.find_by_email('user@example.com') }
+
+                it { should have_selector('title', text: user.name) }
+                it { should have_selector('div.alert.alert-success', text: '') }
+                it {should have_link('Sign out')}
+        end
+
+>>>>>>> 080a2336c7267aca2b35762ef74e73c53a75bfa7
         it "should create a user" do
           expect { click_button submit }.to change(User, :count).by(1)
         end
