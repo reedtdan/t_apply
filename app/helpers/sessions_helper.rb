@@ -10,7 +10,6 @@ module SessionsHelper
   end
   
   def current_user=(user)
-      puts "calling set user #{user}"
       @current_user = user
   end
   
