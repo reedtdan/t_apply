@@ -10,15 +10,17 @@ module SessionsHelper
   end
   
   def current_user=(user)
+      puts "calling set user #{user}"
       @current_user = user
   end
   
   def current_user
+      user = User.find_by_remember_token(cookies[:remember_token])
       @current_user ||= User.find_by_remember_token(cookies[:remember_token])
   end
   
   def sign_out
-      self.current_user = nil
       cookies.delete(:remember_token)
+      self.current_user = nil
   end
 end

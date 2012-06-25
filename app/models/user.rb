@@ -10,7 +10,16 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :name, :email, :password, :password_confirmation
+  attr_accessible :name, :email, :password, :password_confirmation,
+    :DOB, :POB, :Perm_Address, :Cur_Address, :Telephone,
+    :Current_Year, :Grad_Level, :Expected_Grad_Date, :Interests,
+    :School1, :School2, :School3, :School4, :School5, :Honors_Awards,
+    :Extra_Comm_Service, :Work_Experience, :Parent1_Name, :Parent1_Phone, 
+    :Parent1_Email, :Parent2_Name, :Parent2_Phone, :Parent2_Email, 
+    :Background, :Gender, :Parent_Ed, :Parent_Occupation, :Telluride_Learn,
+    :Sig_Name, :Sig_Date, :Essay1, :Essay2, :Essay3, :Essay4, :Essay5,
+    :Transcript
+    
   has_secure_password
 
   before_save { |user| user.email = email.downcase }
