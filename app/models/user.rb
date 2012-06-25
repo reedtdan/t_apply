@@ -32,18 +32,15 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
   validates :password, length: { minimum: 6 }
   validates :password_confirmation, presence: true
-<<<<<<< HEAD
   private
 
   def create_remember_token
     self.remember_token = SecureRandom.urlsafe_base64
   end
-=======
   
   private
 
       def create_remember_token
         self.remember_token = SecureRandom.urlsafe_base64
       end
->>>>>>> 080a2336c7267aca2b35762ef74e73c53a75bfa7
 end
