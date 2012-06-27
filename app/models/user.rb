@@ -17,8 +17,7 @@ class User < ActiveRecord::Base
     :Extra_Comm_Service, :Work_Experience, :Parent1_Name, :Parent1_Phone, 
     :Parent1_Email, :Parent2_Name, :Parent2_Phone, :Parent2_Email, 
     :Background, :Gender, :Parent_Ed, :Parent_Occupation, :Telluride_Learn,
-    :Sig_Name, :Sig_Date, :Essay1, :Essay2, :Essay3, :Essay4, :Essay5,
-    :Transcript
+    :Sig_Name, :Sig_Date
     
   has_secure_password
 

@@ -1,0 +1,86 @@
+<% provide(:title, "Your Application") %> 
+<h1>Your Application</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user) do |f| %>
+
+	<%= f.label :name, "Name" %>
+      <%= f.text_field :name %>
+
+	<%= f.label :email, "Email" %>
+      <%= f.text_field :email %>
+
+      <%= f.label :DOB, "Date of Birth" %>
+      <%= f.text_field :DOB %>
+
+      <%= f.label :POB, "Place of Birth" %>
+      <%= f.text_field :POB %>
+
+	<%= f.label :Perm_Address, "Permanent Address" %>
+      <%= f.text_field :Perm_Address %>
+
+	<%= f.label :Cur_Address, "Current Address" %>
+      <%= f.text_field :Cur_Address %>
+
+	<%= f.label :Current_Year, "What year will you be in the university next year?"%>
+      <%= f.text_field :Current_Year %>
+
+	<%= f.label :Grad_Level, "At which academic level are you studying?"%>
+      <%= f.text_field :Grad_Level %>
+
+	<%= f.label :Expected_Grad_Date, "What is your expected graduation date? (Month and Year)"%>
+      <%= f.text_field :Expected_Grad_Date %>
+
+	<%= f.label :Interests, "What are you major areas of academic interest?" %>
+      <%= f.text_field :Interests %>
+
+	<%= f.label :School1, "At which schools did you studying prior to coming to the University of Michigan" %>
+      <%= f.text_field :School1 %>
+
+	<%= f.label :Extra_Comm_Service, "Please list your extracurricular and community service activities. (List activity, position held, and dates/amount of time per week)" %>
+      <%= f.text_field :Extra_Comm_Service %>
+
+	<%= f.label :Work_Experience, "Please list your work experience. (List employer, position held, and dates/amount of time per week)" %>
+      <%= f.text_field :Work_Experience %>
+
+	<p>Parent/Guardian Contact Info</p>
+	<%= f.label :Parent1_Name, "Parent 1 Name" %>
+      <%= f.text_field :Parent1_Name %>
+	<%= f.label :Parent1_Phone, "Parent 1 Telephone" %>
+      <%= f.text_field :Parent1_Phone %>
+	<%= f.label :Parent1_Email, "Parent 1 Email" %>
+      <%= f.text_field :Parent1_Email %>
+	<%= f.label :Parent2_Name, "Parent 2 Name" %>
+      <%= f.text_field :Parent2_Name %>
+	<%= f.label :Parent2_Phone, "Parent 2 Telephone" %>
+      <%= f.text_field :Parent2_Phone %>
+	<%= f.label :Parent2_Email, "Parent 2 Email" %>
+      <%= f.text_field :Parent2_Email %>
+
+	<p>Optional Info</p>
+	
+	<%= f.label :Background, "Nationality/Ethnicity/Race " %>
+      <%= f.text_field :Background %>
+	<%= f.label :Gender, "Gender" %>
+      <%= f.text_field :Gender %>
+	<%= f.label :Parent_Ed, "Education level of parents/guardians" %>
+      <%= f.text_field :Parent_Ed %>
+	<%= f.label :Parent_Occupation, "Occupations of parents" %>
+      <%= f.text_field :Parent_Occupation %>
+	<%= f.label :Telluride_Learn, "How did you first learn of Telluride House?" %>
+      <%= f.text_field :Telluride_Learn %>
+
+	<p>By signing below I agree that the work submitted is my own and that I have represented myself accurately</p>
+	<%= f.label :Sig_Name, "Signature" %>
+      <%= f.text_field :Sig_Name %>
+	<%= f.label :Sig_Date, "Date" %>
+      <%= f.text_field :Sig_Date %>
+	
+
+      <%= f.submit "Save", class: "btn btn-large btn-primary" %>
+      <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
+
+    <% end %>
+  </div>
+</div>

@@ -1,29 +1,12 @@
 <% provide(:title, @user.name) %>
 <h1><%= @user.name %></h1>
 
-
-<div class="row">
-  <div class="span6 offset3">
-    <%= form_for(:session, url: sessions_path) do |f| %>
-
-      <%= f.label :Date_of_Birth, "Date of Birth" %>
-      <%= f.text_field :Date_of_Birth %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password %>
-
-      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
-    <% end %>
-
-    <p>New user? <%= link_to "Start the Application!", signup_path %></p>
-  </div>
-</div>
-
-
-        <div class="form-actions">
-          <button type="submit" class="btn btn-primary">Save changes</button>
-          <button class="btn">Cancel</button>
-        </div>
-      </fieldset>
-    </form>
-
+Application Instructions:	
+•	Note: Current University of Michigan students should apply in the Fall Application Cycle (due in October) while incoming and transwer undergraduate and graduate University of Michigan students should apply in the Spring Application Cycle.
+•	Parts I and II (General Information and Essays) must be sent via email to mbta.apply@tellurideassociation.org 
+•	Parts I and II should all be submitted as a single document (multiple attachments are prohibited) saved in one of the following formats: doc, pdf or rtf.  
+•	When submitting your application, the subject line of your email should read, “Application of [Your Full Name]”
+•	You should receive a confirmation via email within two business days.  If you have not received a reply email within that timeframe, it is your responsibility to follow-up regarding the receipt of your application.  
+•	Part III (Recommendation Letters and Transcript) should be mailed in or brought to the house in person.  All recommendations should be clearly labeled with your full name.  
+•	Supplementary materials are not expected and cannot be returned to you, but may be included if you feel they will significantly enhance your application.  
+•	Questions about applications should be directed to mbta.apply@tellurideassociation.org. 
