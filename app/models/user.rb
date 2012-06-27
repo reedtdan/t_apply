@@ -17,10 +17,17 @@ class User < ActiveRecord::Base
     :Extra_Comm_Service, :Work_Experience, :Parent1_Name, :Parent1_Phone, 
     :Parent1_Email, :Parent2_Name, :Parent2_Phone, :Parent2_Email, 
     :Background, :Gender, :Parent_Ed, :Parent_Occupation, :Telluride_Learn,
-    :Sig_Name, :Sig_Date, :Essay1, :Essay2, :Essay3, :Essay4, :Essay5,
-    :Transcript
+    :Sig_Name, :Sig_Date
     
   has_secure_password
+  
+  has_attached_file :Essay1, :Esaay2, :Essay3, :Essay4, :Essay5, :Transcript
+    :storage => :s3,
+    :bucket => ENV['S3_BUCKET_NAME'],
+    :s3_credentials => {
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
 
   before_save { |user| user.email = email.downcase }
   before_save :create_remember_token
