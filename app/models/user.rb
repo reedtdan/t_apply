@@ -21,6 +21,15 @@ class User < ActiveRecord::Base
     
   has_secure_password
   
+  has_attached_file :Essay1,
+    :storage => :s3,
+    :bucket => ENV['App_Uploads'],
+    :s3_credentials => {
+      :access_key_id => ENV['AKIAIDTWYSNZFZXMSRZA'],
+      :secret_access_key => ENV['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']
+    }
+
+
   before_save { |user| user.email = email.downcase }
   before_save :create_remember_token
 
