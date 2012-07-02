@@ -21,13 +21,53 @@ class User < ActiveRecord::Base
     
   has_secure_password
   
-  has_attached_file :Essay1, :Esaay2, :Essay3, :Essay4, :Essay5, :Transcript
+  has_attached_file :Essay1,
     :storage => :s3,
     :bucket => ENV['S3_BUCKET_NAME'],
     :s3_credentials => {
       :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
+  
+  has_attached_file :Essay2,
+    :storage => :s3,
+    :bucket => ENV['S3_BUCKET_NAME'],
+    :s3_credentials => {
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+    
+  has_attached_file :Essay3,
+      :storage => :s3,
+      :bucket => ENV['S3_BUCKET_NAME'],
+      :s3_credentials => {
+        :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+        :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+      
+    has_attached_file :Essay4,
+      :storage => :s3,
+      :bucket => ENV['S3_BUCKET_NAME'],
+      :s3_credentials => {
+        :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+        :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+  
+    has_attached_file :Essay5,
+      :storage => :s3,
+      :bucket => ENV['S3_BUCKET_NAME'],
+      :s3_credentials => {
+        :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+        :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+      }
+      
+      has_attached_file :Transcript,
+        :storage => :s3,
+        :bucket => ENV['S3_BUCKET_NAME'],
+        :s3_credentials => {
+          :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+          :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+        }
 
   before_save { |user| user.email = email.downcase }
   before_save :create_remember_token

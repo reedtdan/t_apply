@@ -1,6 +1,8 @@
 TApply::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :my_records
+  
 
   root to: 'static_pages#home'
   match '/signup',  to: 'users#new'

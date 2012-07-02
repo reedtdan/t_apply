@@ -71,11 +71,16 @@
 	<%= f.label :Telluride_Learn, "How did you first learn of Telluride House?" %>
       <%= f.text_field :Telluride_Learn %>
 
+
 	<p>By signing below I agree that the work submitted is my own and that I have represented myself accurately</p>
 	<%= f.label :Sig_Name, "Signature" %>
       <%= f.text_field :Sig_Name %>
 	<%= f.label :Sig_Date, "Date" %>
       <%= f.text_field :Sig_Date %>
+
+
+	<p>Essay Upload</p>
+	Essay 1: <%= f.file_field :Essay1 %>
 	
 
       <%= f.submit "Save", class: "btn btn-large btn-primary" %>
